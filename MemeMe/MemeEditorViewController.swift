@@ -8,7 +8,9 @@
 
 import UIKit
 
-class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
+class MemeEditorViewController: UIViewController {
+    
+    // MARK: - Outlets
     
     @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var shareButton: UIBarButtonItem!
@@ -17,6 +19,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBOutlet weak var topTextField: UITextField!
     @IBOutlet weak var bottomTextField: UITextField!
+    
+    // MARK: - Life Cycle Methods
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,6 +42,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         unsubscribeFromKeyboardNotifications()
     }
     
+    // MARK: - Actions
+    
     @IBAction func cameraButtonPressed(sender: UIBarButtonItem) {
         pickImageFromSource(.Camera)
     }
@@ -58,7 +64,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         presentViewController(activityController, animated: true, completion: nil)
     }
-    // MARK: - 
+    
+    // MARK: - Meme
     
     func save() {
         let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: memeImageView.image!, memedImage: generateMemedImage())
@@ -75,36 +82,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         setVisibilityForToolbarNavbar(hidden: false)
         
         return memedImage
-    }
-    
-    // MARK: - UIImagePickerControllerDelegate Methods
-    
-    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
-        memeImageView.image = image
-        dismissViewControllerAnimated(true) {
-            self.shareButton.enabled = true
-        }
-    }
-    
-    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        dismissViewControllerAnimated(true, completion: nil)
-    }
-    
-    // MARK: - UITextFieldDelegate Methods
-    
-    func textFieldDidBeginEditing(textField: UITextField) {
-        if textField.text == "TOP" || textField.text == "BOTTOM" {
-            textField.text = ""
-        }
-    }
-    
-    func textFieldShouldReturn(textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        textField.text = textField.text?.uppercaseString
     }
     
     // MARK: - Keyboard Notifications
@@ -163,4 +140,37 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
 }
+
+extension MemeEditorViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+ 
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        memeImageView.image = image
+        dismissViewControllerAnimated(true) {
+            self.shareButton.enabled = true
+        }
+    }
+    
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+}
+
+extension MemeEditorViewController: UITextFieldDelegate {
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        if textField.text == "TOP" || textField.text == "BOTTOM" {
+            textField.text = ""
+        }
+    }
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
+    func textFieldDidEndEditing(textField: UITextField) {
+        textField.text = textField.text?.uppercaseString
+    }
+}
+
 
