@@ -68,12 +68,17 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meme Editor" id="7xB-kt-7ss">
-                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Y8p-ZP-fpb"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Y8p-ZP-fpb">
+                            <connections>
+                                <action selector="shareButtonPressed:" destination="BYZ-38-t0r" id="YsA-Yf-Faa"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="lxG-dR-Kvr" id="KCJ-tj-Zhh"/>
                         <outlet property="cameraButton" destination="fbZ-S5-YF1" id="7h7-3o-Cuh"/>
                         <outlet property="memeImageView" destination="7kj-CZ-iPl" id="fyA-N3-zch"/>
+                        <outlet property="shareButton" destination="Y8p-ZP-fpb" id="LPy-e9-qFD"/>
                         <outlet property="toolbar" destination="cce-Yj-sJA" id="svx-eo-fOm"/>
                         <outlet property="topTextField" destination="QNf-jN-0VK" id="SHN-ej-djx"/>
                     </connections>

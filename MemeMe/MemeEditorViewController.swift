@@ -11,6 +11,7 @@ import UIKit
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
     @IBOutlet weak var toolbar: UIToolbar!
+    @IBOutlet weak var shareButton: UIBarButtonItem!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var memeImageView: UIImageView!
     
@@ -19,6 +20,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        shareButton.enabled = false
         
         configureTextField(topTextField)
         configureTextField(bottomTextField)
@@ -44,6 +46,18 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         pickImageFromSource(.PhotoLibrary)
     }
     
+    @IBAction func shareButtonPressed(sender: UIBarButtonItem) {
+        let memedImage = generateMemedImage()
+        
+        let activityController = UIActivityViewController(activityItems: [memedImage], applicationActivities: nil)
+        activityController.completionWithItemsHandler = {
+            activityType, completed, items, error in
+            self.save()
+            self.dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+        presentViewController(activityController, animated: true, completion: nil)
+    }
     // MARK: - 
     
     func save() {
@@ -67,7 +81,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
         memeImageView.image = image
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true) {
+            self.shareButton.enabled = true
+        }
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
