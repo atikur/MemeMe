@@ -21,9 +21,17 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="4oH-Gv-4wC"/>
-                                    <barButtonItem systemItem="camera" id="fbZ-S5-YF1"/>
+                                    <barButtonItem systemItem="camera" id="fbZ-S5-YF1">
+                                        <connections>
+                                            <action selector="cameraButtonPressed:" destination="BYZ-38-t0r" id="gZV-c0-QXV"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="utD-9H-wRn"/>
-                                    <barButtonItem title="Album" id="sYu-e2-EoZ"/>
+                                    <barButtonItem title="Album" id="sYu-e2-EoZ">
+                                        <connections>
+                                            <action selector="albumButtonPressed:" destination="BYZ-38-t0r" id="q2L-zF-Fid"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="6OG-MS-a2W"/>
                                 </items>
                             </toolbar>
@@ -42,6 +50,10 @@
                             <constraint firstAttribute="trailing" secondItem="cce-Yj-sJA" secondAttribute="trailing" id="wx8-Uw-Xsf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="cameraButton" destination="fbZ-S5-YF1" id="7h7-3o-Cuh"/>
+                        <outlet property="memeImageView" destination="7kj-CZ-iPl" id="fyA-N3-zch"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
