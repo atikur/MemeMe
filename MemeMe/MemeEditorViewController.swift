@@ -98,7 +98,7 @@ class MemeEditorViewController: UIViewController {
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomTextField.isFirstResponder() && view.frame.origin.y == 0 {
-            view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
