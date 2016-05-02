@@ -10,6 +10,7 @@ import UIKit
 
 class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
+    @IBOutlet weak var toolbar: UIToolbar!
     @IBOutlet weak var cameraButton: UIBarButtonItem!
     @IBOutlet weak var memeImageView: UIImageView!
     
@@ -41,6 +42,25 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @IBAction func albumButtonPressed(sender: UIBarButtonItem) {
         pickImageFromSource(.PhotoLibrary)
+    }
+    
+    // MARK: - 
+    
+    func save() {
+        let meme = Meme(topText: topTextField.text!, bottomText: bottomTextField.text!, originalImage: memeImageView.image!, memedImage: generateMemedImage())
+    }
+    
+    func generateMemedImage() -> UIImage {
+        setVisibilityForToolbarNavbar(hidden: true)
+        
+        UIGraphicsBeginImageContext(view.frame.size)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
+        let memedImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        setVisibilityForToolbarNavbar(hidden: false)
+        
+        return memedImage
     }
     
     // MARK: - UIImagePickerControllerDelegate Methods
@@ -119,6 +139,11 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         textField.defaultTextAttributes = memeTextAttributes
         textField.textAlignment = .Center
         textField.delegate = self
+    }
+    
+    func setVisibilityForToolbarNavbar(hidden hidden: Bool) {
+        navigationController?.navigationBar.hidden = hidden
+        toolbar.hidden = hidden
     }
     
 }

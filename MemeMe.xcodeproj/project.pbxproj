@@ -12,6 +12,7 @@
 		24207FF61CD6EBAB001FEBF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24207FF41CD6EBAB001FEBF0 /* Main.storyboard */; };
 		24207FF81CD6EBAB001FEBF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24207FF71CD6EBAB001FEBF0 /* Assets.xcassets */; };
 		24207FFB1CD6EBAB001FEBF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24207FF91CD6EBAB001FEBF0 /* LaunchScreen.storyboard */; };
+		245E2FE61CD710FB00BBFAA4 /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 245E2FE51CD710FB00BBFAA4 /* Meme.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		24207FF71CD6EBAB001FEBF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		24207FFA1CD6EBAB001FEBF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24207FFC1CD6EBAB001FEBF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		245E2FE51CD710FB00BBFAA4 /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 			children = (
 				24207FF01CD6EBAB001FEBF0 /* AppDelegate.swift */,
 				24207FF21CD6EBAB001FEBF0 /* MemeEditorViewController.swift */,
+				245E2FE51CD710FB00BBFAA4 /* Meme.swift */,
 				24207FF41CD6EBAB001FEBF0 /* Main.storyboard */,
 				24207FF71CD6EBAB001FEBF0 /* Assets.xcassets */,
 				24207FF91CD6EBAB001FEBF0 /* LaunchScreen.storyboard */,
@@ -136,6 +139,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				245E2FE61CD710FB00BBFAA4 /* Meme.swift in Sources */,
 				24207FF31CD6EBAB001FEBF0 /* MemeEditorViewController.swift in Sources */,
 				24207FF11CD6EBAB001FEBF0 /* AppDelegate.swift in Sources */,
 			);
