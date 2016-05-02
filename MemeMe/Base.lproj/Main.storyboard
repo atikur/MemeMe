@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HMk-Dk-bBK">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--Meme Editor View Controller-->
+        <!--Meme Editor-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="MemeEditorViewController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -45,7 +45,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QNf-jN-0VK">
-                                <rect key="frame" x="20" y="20" width="560" height="17"/>
+                                <rect key="frame" x="20" y="64" width="560" height="17"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -55,6 +55,7 @@
                             <constraint firstItem="QNf-jN-0VK" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="3n6-NO-xeu"/>
                             <constraint firstItem="7kj-CZ-iPl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="4cR-Hk-C3M"/>
                             <constraint firstItem="cce-Yj-sJA" firstAttribute="top" secondItem="lxG-dR-Kvr" secondAttribute="bottom" id="Hf1-Dq-YaS"/>
+                            <constraint firstItem="QNf-jN-0VK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Ild-At-lNc"/>
                             <constraint firstItem="cce-Yj-sJA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ofy-1b-nyY"/>
                             <constraint firstItem="QNf-jN-0VK" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="P4p-gh-XVd"/>
                             <constraint firstItem="cce-Yj-sJA" firstAttribute="top" secondItem="7kj-CZ-iPl" secondAttribute="bottom" id="Wvl-K4-TnF"/>
@@ -63,10 +64,12 @@
                             <constraint firstItem="lxG-dR-Kvr" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="jU6-dv-mDD"/>
                             <constraint firstAttribute="trailing" secondItem="7kj-CZ-iPl" secondAttribute="trailing" id="mU4-js-kPr"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="cce-Yj-sJA" secondAttribute="bottom" id="oV3-tU-1ub"/>
-                            <constraint firstItem="QNf-jN-0VK" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="sXk-pb-ge2"/>
                             <constraint firstAttribute="trailing" secondItem="cce-Yj-sJA" secondAttribute="trailing" id="wx8-Uw-Xsf"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Meme Editor" id="7xB-kt-7ss">
+                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="Y8p-ZP-fpb"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="bottomTextField" destination="lxG-dR-Kvr" id="KCJ-tj-Zhh"/>
                         <outlet property="cameraButton" destination="fbZ-S5-YF1" id="7h7-3o-Cuh"/>
@@ -75,6 +78,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="860" y="369"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="8Lg-BH-Hwu">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="HMk-Dk-bBK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Pvh-ZO-Ft6">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="s5J-H6-aYu"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IjN-rg-rob" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="48" y="369"/>
         </scene>
