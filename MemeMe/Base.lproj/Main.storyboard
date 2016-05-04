@@ -155,28 +155,39 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fev-Ih-cB9" id="WeO-Of-4Rd">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="100"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-MF-2UP">
-                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="84" id="rLl-ke-DWt"/>
-                                            </constraints>
-                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC1-Aj-XZ0">
-                                            <rect key="frame" x="100" y="39" width="42" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <rect key="frame" x="100" y="39" width="45" height="22"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fGk-q6-BOJ">
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-MF-2UP">
+                                                    <rect key="frame" x="3" y="3" width="78" height="78"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="78" id="Rkb-Pf-bNv"/>
+                                                        <constraint firstAttribute="height" constant="78" id="rqO-Im-Lsq"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="84" id="Jts-34-QYQ"/>
+                                                <constraint firstItem="n1t-MF-2UP" firstAttribute="centerX" secondItem="fGk-q6-BOJ" secondAttribute="centerX" id="c21-Wp-FA7"/>
+                                                <constraint firstAttribute="width" constant="84" id="heM-Mu-KWN"/>
+                                                <constraint firstItem="n1t-MF-2UP" firstAttribute="centerY" secondItem="fGk-q6-BOJ" secondAttribute="centerY" id="zdh-4Y-93f"/>
+                                            </constraints>
+                                        </view>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="leading" secondItem="WeO-Of-4Rd" secondAttribute="leadingMargin" id="3R6-In-wjh"/>
-                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="centerY" secondItem="n1t-MF-2UP" secondAttribute="centerY" id="BAM-uw-Blp"/>
-                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="leading" secondItem="n1t-MF-2UP" secondAttribute="trailing" constant="8" id="DDv-6u-Iks"/>
-                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="bottom" secondItem="WeO-Of-4Rd" secondAttribute="bottomMargin" id="gCX-3Q-DkV"/>
-                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="top" secondItem="WeO-Of-4Rd" secondAttribute="topMargin" id="vXj-Ow-oEZ"/>
+                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="leading" secondItem="n1t-MF-2UP" secondAttribute="trailing" constant="11" id="6dD-He-rFy"/>
+                                        <constraint firstAttribute="topMargin" secondItem="fGk-q6-BOJ" secondAttribute="top" id="97J-Jd-Tbr"/>
+                                        <constraint firstAttribute="leadingMargin" secondItem="fGk-q6-BOJ" secondAttribute="leading" id="MXZ-uP-pKR"/>
+                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="centerY" secondItem="n1t-MF-2UP" secondAttribute="centerY" id="MdL-lc-I5N"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
