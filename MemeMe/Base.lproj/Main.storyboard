@@ -92,6 +92,38 @@
             </objects>
             <point key="canvasLocation" x="1933" y="-274"/>
         </scene>
+        <!--Meme Detail Veiw Controller-->
+        <scene sceneID="jEJ-eR-9tY">
+            <objects>
+                <viewController storyboardIdentifier="MemeDetailViewController" id="kam-a0-J8M" customClass="MemeDetailVeiwController" customModule="MemeMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="qar-uU-YxF"/>
+                        <viewControllerLayoutGuide type="bottom" id="wNS-jX-83O"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="tPq-zt-vds">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="H87-hV-UGd">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="H87-hV-UGd" firstAttribute="leading" secondItem="tPq-zt-vds" secondAttribute="leading" id="3w1-Jf-e2N"/>
+                            <constraint firstItem="wNS-jX-83O" firstAttribute="top" secondItem="H87-hV-UGd" secondAttribute="bottom" id="DYC-Vb-31c"/>
+                            <constraint firstItem="H87-hV-UGd" firstAttribute="top" secondItem="qar-uU-YxF" secondAttribute="bottom" id="L4d-XJ-684"/>
+                            <constraint firstAttribute="trailing" secondItem="H87-hV-UGd" secondAttribute="trailing" id="Ugf-qR-fF2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="memeImageView" destination="H87-hV-UGd" id="W0Y-H1-55v"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ybA-cF-303" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1466" y="875"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="8Lg-BH-Hwu">
             <objects>
