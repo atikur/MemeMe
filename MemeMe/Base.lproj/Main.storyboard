@@ -159,25 +159,24 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="n1t-MF-2UP">
-                                            <rect key="frame" x="8" y="8" width="114" height="84"/>
+                                            <rect key="frame" x="8" y="8" width="84" height="84"/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="114" id="A7r-HE-bdq"/>
-                                                <constraint firstAttribute="height" constant="84" id="Tzo-FT-qif"/>
+                                                <constraint firstAttribute="width" constant="84" id="rLl-ke-DWt"/>
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YC1-Aj-XZ0">
-                                            <rect key="frame" x="130" y="39" width="462" height="21"/>
+                                            <rect key="frame" x="100" y="39" width="42" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="centerY" secondItem="WeO-Of-4Rd" secondAttribute="centerY" id="2iT-7s-DZJ"/>
-                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="leading" secondItem="n1t-MF-2UP" secondAttribute="trailing" constant="8" id="3Ke-zW-xbo"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="YC1-Aj-XZ0" secondAttribute="trailing" id="Z5c-xW-AMw"/>
-                                        <constraint firstAttribute="leadingMargin" secondItem="n1t-MF-2UP" secondAttribute="leading" id="hes-aE-zIO"/>
-                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="centerY" secondItem="n1t-MF-2UP" secondAttribute="centerY" id="t99-QL-zpD"/>
+                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="leading" secondItem="WeO-Of-4Rd" secondAttribute="leadingMargin" id="3R6-In-wjh"/>
+                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="centerY" secondItem="n1t-MF-2UP" secondAttribute="centerY" id="BAM-uw-Blp"/>
+                                        <constraint firstItem="YC1-Aj-XZ0" firstAttribute="leading" secondItem="n1t-MF-2UP" secondAttribute="trailing" constant="8" id="DDv-6u-Iks"/>
+                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="bottom" secondItem="WeO-Of-4Rd" secondAttribute="bottomMargin" id="gCX-3Q-DkV"/>
+                                        <constraint firstItem="n1t-MF-2UP" firstAttribute="top" secondItem="WeO-Of-4Rd" secondAttribute="topMargin" id="vXj-Ow-oEZ"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
@@ -323,6 +322,6 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="d20-0W-Wfp"/>
+        <segue reference="wZm-Se-3aE"/>
     </inferredMetricsTieBreakers>
 </document>
