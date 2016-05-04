@@ -245,6 +245,7 @@
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zAS-rG-NGs">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4ND-9J-wKE">
                             <size key="itemSize" width="156" height="119"/>
                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -265,6 +266,7 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="8mP-y1-NSB" firstAttribute="bottom" secondItem="D4f-gr-puF" secondAttribute="bottomMargin" id="6tJ-kD-HVg"/>
                                     <constraint firstItem="8mP-y1-NSB" firstAttribute="trailing" secondItem="D4f-gr-puF" secondAttribute="trailingMargin" id="AAD-fh-fNS"/>
