@@ -65,6 +65,10 @@ class MemeEditorViewController: UIViewController {
         presentViewController(activityController, animated: true, completion: nil)
     }
     
+    @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
     // MARK: - Meme
     
     func save() {
