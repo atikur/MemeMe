@@ -22,7 +22,8 @@ class SentMemesCollectionViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let dimension = (view.frame.size.width - (2 * minLineSpacing)) / 3.0
+        let screenLeastDimension = view.frame.size.width < view.frame.size.height ? view.frame.size.width : view.frame.size.height
+        let dimension = (screenLeastDimension - (2 * minLineSpacing)) / 3.0
         
         flowLayout.minimumLineSpacing = minLineSpacing
         flowLayout.minimumInteritemSpacing = minInterItemSpacing
